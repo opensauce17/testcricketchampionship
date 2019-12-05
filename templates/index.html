@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The ICC World Test Championship</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='lib/venobox/venobox.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="#main">ICC<span>WORLD TEST</span>CHAMPIONSHIP</a></h1> -->
+      <!-- <a href="#intro" class="scrollto"><img src="{{ url_for('static', filename='img/logo6.png') }}" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About The Championship</a></li>
+            <li><a href="#teams">Participating Teams</a></li>
+          <li><a href="#speakers">Point Scoring</a></li>
+          <li><a href="#pointstable">Leader Board</a></li>
+          <li><a href="#schedule">Match Schedules</a></li>
+          <!--<li><a href="#venue">Venues</a></li> -->
+          <!--<li><a href="#hotels">Hotels</a></li>-->
+          <!--<li><a href="#gallery">Gallery</a></li> -->
+         <!-- <li><a href="#supporters">Sponsors</a></li> -->
+         <!-- <li><a href="#contact">Contact</a></li>-->
+          <!-- <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li> -->
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">The ICC<br><span>World Test</span> Championship</h1>
+      <p class="mb-4 pb-0">August 2019 - June 2021</p>
+      <a href="https://www.youtube.com/watch?v=mgHSCOIAwNE" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+      <a href="#about" class="about-btn scrollto">About The World Test Championship </a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="section-header">
+            <h2>About The Championship</h2>
+              </div>
+              {% for i in about %}
+            <p>{{ i }}</p>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!--==========================
+      Teams Section
+    ============================-->
+
+    <section id="teams" class="section-with-bg">
+        <div class="container">
+            <div class="col4 ">
+             <div class="section-header">
+            <h2>Participating Teams</h2>
+             </div>
+
+           <div class="row">
+             <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ aus_flag }}" alt="Card image" height="170">
+               </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Australia</h5>
+                  </div>
+             </div>
+             <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ ban_flag }}" alt="Card image" height="170">
+               </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Bangladesh</h5>
+                  </div>
+             </div>
+             <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ eng_flag  }}" alt="Card image" height="170">
+               </div>
+                  <div class="card-body">
+                    <h5 class="card-title">England</h5>
+                  </div>
+             </div>
+              <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ ind_flag  }}" alt="Card image" height="170">
+               </div>
+                   <div class="card-body">
+                    <h5 class="card-title">India</h5>
+                  </div>
+             </div>
+                <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ nzl_flag }}" alt="Card image" height="170">
+               </div>
+                     <div class="card-body">
+                    <h5 class="card-title">New Zealand</h5>
+                  </div>
+             </div>
+                <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ pak_flag }}" alt="Card image" height="170">
+               </div>
+                     <div class="card-body">
+                    <h5 class="card-title">Pakistan</h5>
+                  </div>
+             </div>
+                <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ saf_flag }}" alt="Card image" height="170">
+               </div>
+                     <div class="card-body">
+                    <h5 class="card-title">South Africa</h5>
+                  </div>
+             </div>
+                <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ sri_flag }}" alt="Card image" height="170">
+               </div>
+                     <div class="card-body">
+                    <h5 class="card-title">Sri Lanka</h5>
+                  </div>
+             </div>
+                <div class="col-md-4">
+                  <div class="card" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <img class="card-img-top img-fluid" src="{{ win_flag }}" alt="Card image" height="170">
+               </div>
+                     <div class="card-body">
+                    <h5 class="card-title">West Indies</h5>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!--==========================
+      Point Scoring Section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+       <!-- <div class="section-header"> -->
+          <div class="section-header">
+          <h2>Point Scoring</h2>
+          </div>
+             {% for i in point_scoring %}
+            <p>{{ i }}</p>
+              {% endfor %}
+          <!--<p>Here are some of our speakers</p>-->
+        </div>
+        </div>
+      </div>
+    </section>
+
+   <!--==========================
+     Point Table Section
+    ============================-->
+    <section id="pointstable" class="section-with-bg">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-lg-12">
+       <!-- <div class="section-header"> -->
+         <div class="tab-content row justify-content-center">
+         <div class="section-header">
+          <h2>Leader Board</h2>
+         </div>
+           <div class="col-xs-6 table-responsive-xl ">
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Position</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Series Played</th>
+                    <th scope="col"> Series Win</th>
+                    <th scope="col">Series Lost</th>
+                    <th scope="col">Series Drawn</th>
+                    <th scope="col">Matches Played</th>
+                    <th scope="col">Matches Won</th>
+                    <th scope="col">Matches Lost</th>
+                    <th scope="col">Matches Drawn</th>
+                    <th scope="col">Matches Tied</th>
+                    <th scope="col">PC</th>
+                    <th scope="col">Win Percent</th>
+                    <th scope="col">Points</th>
+                    <th scope="col">RPWR</th>
+                  </tr>
+               </thead>
+                 <tbody>
+                    {% for i in data %}
+                 <tr>
+                    {% for x in i %}
+                 <td>{{ x }}</td>
+                    {% endfor %}
+                 </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ </section>
+
+
+
+    <!--==========================
+      Schedule Section
+    ============================-->
+    <section id="schedule" class="wow fadeInUp">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Match Schedules</h2>
+        <!--  <p>Here is the match schedules</p> -->
+        </div>
+
+        <ul class="nav nav-tabs" role="tablist">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">2019</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">2019-20</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">2020</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-4" role="tab" data-toggle="tab">2020-21</a>
+          </li>
+        </ul>
+
+        <div class="tab-content row justify-content-center">
+
+          <!-- 2019 Matches -->
+          <div role="tabpanel" class="col-lg-12 tab-pane fade show active" id="day-1">
+
+                <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ match1_dt }}</th>
+                            <th style="width: 50%">{{ match1_scr }}</th>
+                            <th style="width: 20%">{{ match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ match2_dt }}</th>
+                            <th style="width: 50%">{{ match2_scr }}</th>
+                            <th style="width: 20%">{{ match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ match3_dt }}</th>
+                            <th style="width: 50%">{{ match3_scr }}</th>
+                            <th style="width: 20%">{{ match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ match4_dt }}</th>
+                            <th style="width: 50%">{{ match4_scr }}</th>
+                            <th style="width: 20%">{{ match4_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ match5_dt }}</th>
+                            <th style="width: 50%">{{ match5_scr }}</th>
+                            <th style="width: 20%">{{ match5_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                <br>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t2match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t2match1_dt }}</th>
+                            <th style="width: 50%">{{ t2match1_scr }}</th>
+                            <th style="width: 20%">{{ t2match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t2match2_dt }}</th>
+                            <th style="width: 50%">{{ t2match2_scr }}</th>
+                            <th style="width: 20%">{{ t2match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <br>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t3match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t3match1_dt }}</th>
+                            <th style="width: 50%">{{ t3match1_scr }}</th>
+                            <th style="width: 20%">{{ t3match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t3match2_dt }}</th>
+                            <th style="width: 50%">{{ t3match2_scr }}</th>
+                            <th style="width: 20%">{{ t3match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+         </div>
+
+          <!-- 2019-20 Matches -->
+          <div role="tabpanel" class="col-lg-12  tab-pane fade" id="day-2">
+
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t4match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t4match1_dt }}</th>
+                            <th style="width: 50%">{{ t4match1_scr }}</th>
+                            <th style="width: 20%">{{ t4match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t4match2_dt }}</th>
+                            <th style="width: 50%">{{ t4match2_scr }}</th>
+                            <th style="width: 20%">{{ t4match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+             <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t4match3_dt }}</th>
+                            <th style="width: 50%">{{ t4match3_scr }}</th>
+                            <th style="width: 20%">{{ t4match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t5match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t5match1_dt }}</th>
+                            <th style="width: 50%">{{ t5match1_scr }}</th>
+                            <th style="width: 20%">{{ t5match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t5match2_dt }}</th>
+                            <th style="width: 50%">{{ t5match2_scr }}</th>
+                            <th style="width: 20%">{{ t5match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t6match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t6match1_dt }}</th>
+                            <th style="width: 50%">{{ t6match1_scr }}</th>
+                            <th style="width: 20%">{{ t6match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t6match2_dt }}</th>
+                            <th style="width: 50%">{{ t6match2_scr }}</th>
+                            <th style="width: 20%">{{ t6match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t7match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t7match1_dt }}</th>
+                            <th style="width: 50%">{{ t7match1_scr }}</th>
+                            <th style="width: 20%">{{ t7match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t7match2_dt }}</th>
+                            <th style="width: 50%">{{ t7match2_scr }}</th>
+                            <th style="width: 20%">{{ t7match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t8match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t8match1_dt }}</th>
+                            <th style="width: 50%">{{ t8match1_scr }}</th>
+                            <th style="width: 25%">{{ t8match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t8match2_dt }}</th>
+                            <th style="width: 50%">{{ t8match2_scr }}</th>
+                            <th style="width: 20%">{{ t8match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t8match3_dt }}</th>
+                            <th style="width: 50%">{{ t8match3_scr }}</th>
+                            <th style="width: 20%">{{ t8match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t9match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t9match1_dt }}</th>
+                            <th style="width: 50%">{{ t9match1_scr }}</th>
+                            <th style="width: 20%">{{ t9match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t9match2_dt }}</th>
+                            <th style="width: 50%">{{ t9match2_scr }}</th>
+                            <th style="width: 20%">{{ t9match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t9match3_dt }}</th>
+                            <th style="width: 50%">{{ t9match3_scr }}</th>
+                            <th style="width: 20%">{{ t9match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t9match4_dt }}</th>
+                            <th style="width: 50%">{{ t9match4_scr }}</th>
+                            <th style="width: 20%">{{ t9match4_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+              <div class="row">
+                <div class="col-lg-12">
+                      <div><h3><b>{{ t10match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t10match1_dt }}</th>
+                            <th style="width: 50%">{{ t10match1_scr }}</th>
+                            <th style="width: 20%">{{ t10match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t10match2_dt }}</th>
+                            <th style="width: 50%">{{ t10match2_scr }}</th>
+                            <th style="width: 20%">{{ t10match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+              <div class="row">
+                <div class="col-lg-12">
+                      <div><h3><b>{{ t11match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t11match1_dt }}</th>
+                            <th style="width: 50%">{{ t11match1_scr }}</th>
+                            <th style="width: 20%">{{ t11match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t11match2_dt }}</th>
+                            <th style="width: 50%">{{ t11match2_scr }}</th>
+                            <th style="width: 20%">{{ t11match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                <div class="col-lg-12">
+                      <div><h3><b>{{ t12match1_team}}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t12match1_dt }}</th>
+                            <th style="width: 50%">{{ t12match1_scr }}</th>
+                            <th style="width: 20%">{{ t12match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t12match2_dt }}</th>
+                            <th style="width: 50%">{{ t12match2_scr }}</th>
+                            <th style="width: 20%">{{ t12match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+          </div>
+          <!-- End 2019-20 Matches-->
+
+          <!-- 2020 Matches -->
+          <div role="tabpanel" class="col-lg-12  tab-pane fade" id="day-3">
+
+                <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t13match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t13match1_dt }}</th>
+                            <th style="width: 50%">{{ t13match1_scr }}</th>
+                            <th style="width: 20%">{{ t13match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t13match2_dt }}</th>
+                            <th style="width: 50%">{{ t13match2_scr }}</th>
+                            <th style="width: 20%">{{ t13match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t14match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t14match1_dt }}</th>
+                            <th style="width: 50%">{{ t14match1_scr }}</th>
+                            <th style="width: 20%">{{ t14match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t14match2_dt }}</th>
+                            <th style="width: 50%">{{ t14match2_scr }}</th>
+                            <th style="width: 20%">{{ t14match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t14match3_dt }}</th>
+                            <th style="width: 50%">{{ t14match3_scr }}</th>
+                            <th style="width: 20%">{{ t14match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t15match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t15match1_dt }}</th>
+                            <th style="width: 50%">{{ t15match1_scr }}</th>
+                            <th style="width: 20%">{{ t15match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t15match2_dt }}</th>
+                            <th style="width: 50%">{{ t15match2_scr }}</th>
+                            <th style="width: 20%">{{ t15match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t15match3_dt }}</th>
+                            <th style="width: 50%">{{ t15match3_scr }}</th>
+                            <th style="width: 20%">{{ t15match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t16match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t16match1_dt }}</th>
+                            <th style="width: 50%">{{ t16match1_scr }}</th>
+                            <th style="width: 20%">{{ t16match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t16match2_dt }}</th>
+                            <th style="width: 50%">{{ t16match2_scr }}</th>
+                            <th style="width: 20%">{{ t16match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t16match3_dt }}</th>
+                            <th style="width: 50%">{{ t16match3_scr }}</th>
+                            <th style="width: 20%">{{ t16match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t17match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t17match1_dt }}</th>
+                            <th style="width: 50%">{{ t17match1_scr }}</th>
+                            <th style="width: 20%">{{ t17match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t17match2_dt }}</th>
+                            <th style="width: 50%">{{ t17match2_scr }}</th>
+                            <th style="width: 20%">{{ t17match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t18match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t18match1_dt }}</th>
+                            <th style="width: 50%">{{ t18match1_scr }}</th>
+                            <th style="width: 20%">{{ t18match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t18match2_dt }}</th>
+                            <th style="width: 50%">{{ t18match2_scr }}</th>
+                            <th style="width: 20%">{{ t18match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+
+            <!-- End 2020 Matches -->
+
+
+          </div>
+          <!-- 2020-21 Matches -->
+             <div role="tabpanel" class="col-lg-12  tab-pane fade" id="day-4">
+
+                 <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t19match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t19match1_dt }}</th>
+                            <th style="width: 50%">{{ t19match1_scr }}</th>
+                            <th style="width: 20%">{{ t19match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t19match2_dt }}</th>
+                            <th style="width: 50%">{{ t19match2_scr }}</th>
+                            <th style="width: 20%">{{ t19match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                   <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t19match3_dt }}</th>
+                            <th style="width: 50%">{{ t19match3_scr }}</th>
+                            <th style="width: 20%">{{ t19match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                   <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t19match4_dt }}</th>
+                            <th style="width: 50%">{{ t19match4_scr }}</th>
+                            <th style="width: 20%">{{ t19match4_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                 <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t20match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t20match1_dt }}</th>
+                            <th style="width: 50%">{{ t20match1_scr }}</th>
+                            <th style="width: 20%">{{ t20match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t20match2_dt }}</th>
+                            <th style="width: 50%">{{ t20match2_scr }}</th>
+                            <th style="width: 20%">{{ t20match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                   <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t20match3_dt }}</th>
+                            <th style="width: 50%">{{ t20match3_scr }}</th>
+                            <th style="width: 20%">{{ t20match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t21match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t21match1_dt }}</th>
+                            <th style="width: 50%">{{ t21match1_scr }}</th>
+                            <th style="width: 20%">{{ t21match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t21match2_dt }}</th>
+                            <th style="width: 50%">{{ t21match2_scr }}</th>
+                            <th style="width: 20%">{{ t21match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t22match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t22match1_dt }}</th>
+                            <th style="width: 50%">{{ t22match1_scr }}</th>
+                            <th style="width: 20%">{{ t22match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t22match2_dt }}</th>
+                            <th style="width: 50%">{{ t22match2_scr }}</th>
+                            <th style="width: 20%">{{ t22match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t22match3_dt }}</th>
+                            <th style="width: 50%">{{ t22match3_scr }}</th>
+                            <th style="width: 20%">{{ t22match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t23match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t23match1_dt }}</th>
+                            <th style="width: 50%">{{ t23match1_scr }}</th>
+                            <th style="width: 20%">{{ t23match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t23match2_dt }}</th>
+                            <th style="width: 50%">{{ t23match2_scr }}</th>
+                            <th style="width: 20%">{{ t23match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t23match3_dt }}</th>
+                            <th style="width: 50%">{{ t23match3_scr }}</th>
+                            <th style="width: 20%">{{ t23match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t23match4_dt }}</th>
+                            <th style="width: 50%">{{ t23match4_scr }}</th>
+                            <th style="width: 20%">{{ t23match4_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t23match5_dt }}</th>
+                            <th style="width: 50%">{{ t23match5_scr }}</th>
+                            <th style="width: 20%">{{ t23match5_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t24match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t24match1_dt }}</th>
+                            <th style="width: 50%">{{ t24match1_scr }}</th>
+                            <th style="width: 20%">{{ t24match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t24match2_dt }}</th>
+                            <th style="width: 50%">{{ t24match2_scr }}</th>
+                            <th style="width: 20%">{{ t24match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+             <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t25match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t25match1_dt }}</th>
+                            <th style="width: 50%">{{ t25match1_scr }}</th>
+                            <th style="width: 20%">{{ t25match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t25match2_dt }}</th>
+                            <th style="width: 50%">{{ t25match2_scr }}</th>
+                            <th style="width: 20%">{{ t25match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t26match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t26match1_dt }}</th>
+                            <th style="width: 50%">{{ t26match1_scr }}</th>
+                            <th style="width: 20%">{{ t26match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t26match2_dt }}</th>
+                            <th style="width: 50%">{{ t26match2_scr }}</th>
+                            <th style="width: 20%">{{ t26match2_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t26match3_dt }}</th>
+                            <th style="width: 50%">{{ t26match3_scr }}</th>
+                            <th style="width: 20%">{{ t26match3_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+             <div class="row">
+                  <div class="col-lg-12">
+                      <div><h3><b>{{ t27match1_team }}</b></h3></div>
+                      <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t27match1_dt }}</th>
+                            <th style="width: 50%">{{ t27match1_scr }}</th>
+                            <th style="width: 20%">{{ t27match1_rslt }}</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+                  </div>
+               </div>
+              <div class="col-xs-6">
+                        <table class="table table-light">
+                         <thead>
+                          <tr>
+                            <th style="width: 15%">{{ t27match2_dt }}</th>
+                            <th style="width: 50%">{{ t27match2_scr }}</th>
+                            <!--<th style="width: 20%">{{ t27match2_rslt }}</th>-->
+                            <th style="width: 20%">TBD</th>
+                          </tr>
+                         </thead>
+                        </table>
+                      </div>
+
+
+
+
+
+
+
+
+             </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==========================
+      Venue Section
+    ============================-->
+    <!--  <section id="venue" class="wow fadeInUp">
+
+    <div class="container-fluid">
+
+        <div class="section-header">
+          <h2>Event Venue</h2>
+          <p>Event venue location info and gallery</p>
+        </div>
+
+        <div class="row no-gutters">
+          <!--<div class="col-lg-6 venue-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+                <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>Downtown Conference Center, New York</h3>
+                <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>Downtown Conference Center, New York</h3>
+                <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container-fluid venue-gallery-container">
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/1.jpg') }}" class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/1.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/2.jpg') }}" class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/2.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/3.jpg') }}" class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/3.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/4.jpg') }}" class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/4.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/5.jpg') }}" class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/5.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/6.jpg') }}"  class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/6.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/7.jpg') }}" class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/7.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/8.jpg') }}" class="venobox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/8.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section> -->
+
+    <!--==========================
+      Hotels Section
+    ============================
+    <section id="hotels" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Hotels</h2>
+          <p>Her are some nearby hotels</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="hotel">
+              <div class="hotel-img">
+                <img src="{{ url_for('static', filename='img/hotels/1.jpg') }}" alt="Hotel 1" class="img-fluid">
+              </div>
+              <h3><a href="#">Hotel 1</a></h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>0.4 Mile from the Venue</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="hotel">
+              <div class="hotel-img">
+                <img src="{{ url_for('static', filename='img/hotels/2.jpg') }}" alt="Hotel 2" class="img-fluid">
+              </div>
+              <h3><a href="#">Hotel 2</a></h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-full"></i>
+              </div>
+              <p>0.5 Mile from the Venue</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="hotel">
+              <div class="hotel-img">
+                <img src="{{ url_for('static', filename='img/hotels/3.jpg') }}" alt="Hotel 3" class="img-fluid">
+              </div>
+              <h3><a href="#">Hotel 3</a></h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>0.6 Mile from the Venue</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+   <!-- <section id="gallery" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+
+      <div class="owl-carousel gallery-carousel">
+        <a href="{{ url_for('static', filename='img/gallery/1.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/1.jpg') }}" alt=""></a>
+        <a href="{{ url_for('static', filename='img/gallery/2.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/2.jpg') }}" alt=""></a>
+        <a href="{{ url_for('static', filename='img/gallery/3.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/3.jpg') }}" alt=""></a>
+        <a href="{{ url_for('static', filename='img/gallery/4.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/4.jpg') }}" alt=""></a>
+        <a href="{{ url_for('static', filename='img/gallery/5.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/5.jpg') }}" alt=""></a>
+        <a href="{{ url_for('static', filename='img/gallery/6.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/6.jpg') }}" alt=""></a>
+        <a href="{{ url_for('static', filename='img/gallery/7.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/7.jpg') }}" alt=""></a>
+        <a href="{{ url_for('static', filename='img/gallery/8.jpg') }}" class="venobox" data-gall="gallery-carousel"><img src="{{ url_for('static', filename='img/gallery/8.jpg') }}" alt=""></a>
+      </div>
+
+    </section> -->
+
+    <!--==========================
+      Sponsors Section
+    ============================
+    <section id="supporters" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
+
+        <div class="row no-gutters supporters-wrap clearfix">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/1.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/2.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/3.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/4.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/5.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/6.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/7.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{{ url_for('static', filename='img/supporters/8.png') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==========================
+      F.A.Q Section
+    ============================
+    <section id="faq" class="wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>F.A.Q </h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+              <ul id="faq-list">
+
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq2" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq3" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq4" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq5" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq6" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                    </p>
+                  </div>
+                </li>
+      
+              </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==========================
+      Subscribe Section
+    ============================
+    <section id="subscribe">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Newsletter</h2>
+          <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
+        </div>
+
+        <form method="POST" action="#">
+          <div class="form-row justify-content-center">
+            <div class="col-auto">
+              <input type="text" class="form-control" placeholder="Enter your Email">
+            </div>
+            <div class="col-auto">
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Buy Ticket Section
+    ============================
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Buy Tickets</h2>
+          <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
+                <h6 class="card-price text-center">$150</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
+                <h6 class="card-price text-center">$250</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pro Tier
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
+                <h6 class="card-price text-center">$350</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Order Form
+      <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Buy Tickets</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                  <select id="ticket-type" name="ticket-type" class="form-control" >
+                    <option value="">-- Select Your Ticket Type --</option>
+                    <option value="standard-access">Standard Access</option>
+                    <option value="pro-access">Pro Access</option>
+                    <option value="premium-access">Premium Access</option>
+                  </select>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn">Buy Now</button>
+                </div>
+              </form>
+            </div>
+         </div><!-- /.modal-content -->
+     <!--   </div><!-- /.modal-dialog -->
+     <!-- </div><!-- /.modal
+
+    </section>
+
+    <!--==========================
+      Contact Section
+    ============================
+    <section id="contact" class="section-bg wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Nihil officia ut sint molestiae tenetur.</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>A108 Adam Street, NY 535022, USA</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- #contact
+
+  </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+        <!--  <div class="col-lg-3 col-md-6 footer-info">
+            <!--<img src="{{ url_for('static', filename='img/logo.png') }}" alt="TheEvenet">
+            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container">
+   <!--   <div class="copyright">
+        &copy; Copyright <strong>Mike Hyland</strong>. All Rights Reserved
+      </div> -->
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+    </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/superfish/hoverIntent.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/superfish/superfish.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/venobox/venobox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="{{ url_for('static', filename='contactform/contactform.js') }}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
