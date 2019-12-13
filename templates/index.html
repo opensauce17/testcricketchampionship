@@ -43,7 +43,8 @@
 }
 </style>
 
-  	$(window).on(‘load’, function() {
+  	//$(window).on('load', function() {
+  	$(window).load(function() {
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");;
 	});
@@ -57,8 +58,6 @@
 
 </head>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 <body>
 
@@ -1932,6 +1931,8 @@
   <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
   <script src="{{ url_for('static', filename='lib/venobox/venobox.min.js') }}"></script>
   <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
   <!-- Contact Form JavaScript File -->
   <script src="{{ url_for('static', filename='contactform/contactform.js') }}"></script>
