@@ -31,7 +31,7 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 <style>
-.no-js #loader { display: none;  }
+.no-js #loader { display: none; }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .se-pre-con {
   position: fixed;
@@ -44,7 +44,7 @@
 }
 </style>
 
-  	$(window).load(function() {
+  	$(window).on('load', function() {
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");;
 	});
