@@ -1565,16 +1565,16 @@ def index():
     t27m1lst = [t27match1_date, t27match1_score, t27match1_result]
 
     ###MATCH2###
-    t27match2_date = page_soup.findAll("table")[219]
+    t27match2_date = page_soup.findAll("table")[216]
     t27match2_date = t27match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t27match2_score = page_soup.find_all(["table"])[220].find_all('td')
+    t27match2_score = page_soup.find_all(["table"])[217].find_all('td')
     t27m2 = []
     for i in t27match2_score:
         t27m2.append(i.text.rstrip().strip())
     t27match2_score = ' '.join(t27m2).replace('&', 'and ')
 
-    t27match2_result = page_soup.findAll("table")[221]
+    t27match2_result = page_soup.findAll("table")[218]
     try:
         t27match2_result = ' '.join(t27match2_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1987,7 +1987,7 @@ def index():
                            t26match2_rslt=t26match2_rslt, t26match3_dt=t26match3_dt, t26match3_scr=t26match3_scr,
                            t26match3_rslt=t26match3_rslt, t27match1_team=t27match1_team, t27match1_dt=t27match1_dt,
                            t27match1_scr=t27match1_scr, t27match1_rslt=t27match1_rslt, t27match2_dt=t27match2_dt,
-                           t27match2_scr=t27match2_scr) #, t27match2_rslt=t27match2_rslt)
+                           t27match2_scr=t27match2_scr, t27match2_rslt=t27match2_rslt)
 
 
 if __name__ == '__main__':
