@@ -1401,7 +1401,7 @@ def index():
     ###MATCH5###
 
     ###
-    # NOTE - there is a missing table. This match is the same as above. 
+    # NOTE - there is a missing table. This match is the same as above.
     ##
     t23match5_date = page_soup.findAll("table")[189]
     t23match5_date = t23match5_date.text.rstrip().strip().replace('Scorecard', '')
