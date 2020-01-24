@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect, message_flashed, flash, jsonify
 
-from bs4 import BeautifulSoup as soup  # HTML data structure
+from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
 import re
 
