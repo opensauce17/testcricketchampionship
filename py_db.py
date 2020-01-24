@@ -1,13 +1,13 @@
 #! /usr/bin/env python
 
-
-import sqlite3
-from sqlite3 import Error
-from bs4 import BeautifulSoup as soup  # HTML data structure
-from urllib.request import urlopen as uReq  # Web client
+from bs4 import BeautifulSoup as soup
+from urllib.request import urlopen as uReq
 import re
-from collections import defaultdict
 
+'''
+This is the test script that is used to prove scraping is correct before being added
+to the server.py file.
+'''
 
 def get_league_positions():
 
