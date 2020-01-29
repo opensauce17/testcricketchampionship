@@ -852,16 +852,16 @@ def index():
     ###2020 TEAM3####
 
     ###MATCH1###
-    t15match1_date = page_soup.findAll("table")[114]
+    t15match1_date = page_soup.findAll("table")[113]
     t15match1_date = t15match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t15match1_score = page_soup.find_all(["table"])[115].find_all('td')
+    t15match1_score = page_soup.find_all(["table"])[114].find_all('td')
     t15m1 = []
     for i in t15match1_score:
         t15m1.append(i.text.rstrip().strip())
     t15match1_score = ' '.join(t15m1).replace('&', 'and ')
 
-    t15match1_result = page_soup.findAll("table")[116]
+    t15match1_result = page_soup.findAll("table")[115]
     try:
         t15match1_result = ' '.join(t15match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -870,16 +870,16 @@ def index():
     t15m1lst = [t15match1_date, t15match1_score, t15match1_result]
 
     ###MATCH2###
-    t15match2_date = page_soup.findAll("table")[117]
+    t15match2_date = page_soup.findAll("table")[116]
     t15match2_date = t15match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t15match2_score = page_soup.find_all(["table"])[118].find_all('td')
+    t15match2_score = page_soup.find_all(["table"])[117].find_all('td')
     t15m2 = []
     for i in t15match2_score:
         t15m2.append(i.text.rstrip().strip())
     t15match2_score = ' '.join(t15m2).replace('&', 'and ')
 
-    t15match2_result = page_soup.findAll("table")[119]
+    t15match2_result = page_soup.findAll("table")[118]
     try:
         t15match2_result = ' '.join(t15match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -888,16 +888,16 @@ def index():
     t15m2lst = [t15match2_date, t15match2_score, t15match2_result]
 
     ###MATCH3###
-    t15match3_date = page_soup.findAll("table")[120]
+    t15match3_date = page_soup.findAll("table")[119]
     t15match3_date = t15match3_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t15match3_score = page_soup.find_all(["table"])[121].find_all('td')
+    t15match3_score = page_soup.find_all(["table"])[120].find_all('td')
     t15m3 = []
     for i in t15match3_score:
         t15m3.append(i.text.rstrip().strip())
     t15match3_score = ' '.join(t15m3).replace('&', 'and ')
 
-    t15match3_result = page_soup.findAll("table")[122]
+    t15match3_result = page_soup.findAll("table")[121]
     try:
         t15match3_result = ' '.join(t15match3_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -913,16 +913,16 @@ def index():
     ###2020 TEAM4####
 
     ###MATCH1###
-    t16match1_date = page_soup.findAll("table")[123]
+    t16match1_date = page_soup.findAll("table")[122]
     t16match1_date = t16match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t16match1_score = page_soup.find_all(["table"])[124].find_all('td')
+    t16match1_score = page_soup.find_all(["table"])[123].find_all('td')
     t16m1 = []
     for i in t16match1_score:
         t16m1.append(i.text.rstrip().strip())
     t16match1_score = ' '.join(t16m1).replace('&', 'and ')
 
-    t16match1_result = page_soup.findAll("table")[125]
+    t16match1_result = page_soup.findAll("table")[124]
     try:
         t16match1_result = ' '.join(t16match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -931,16 +931,16 @@ def index():
     t16m1lst = [t16match1_date, t16match1_score, t16match1_result]
 
     ###MATCH2###
-    t16match2_date = page_soup.findAll("table")[126]
+    t16match2_date = page_soup.findAll("table")[125]
     t16match2_date = t16match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t16match2_score = page_soup.find_all(["table"])[127].find_all('td')
+    t16match2_score = page_soup.find_all(["table"])[126].find_all('td')
     t16m2 = []
     for i in t16match2_score:
         t16m2.append(i.text.rstrip().strip())
     t16match2_score = ' '.join(t16m2).replace('&', 'and ')
 
-    t16match2_result = page_soup.findAll("table")[128]
+    t16match2_result = page_soup.findAll("table")[127]
     try:
         t16match2_result = ' '.join(t16match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -948,26 +948,7 @@ def index():
 
     t16m2lst = [t16match2_date, t16match2_score, t16match2_result]
 
-    ###MATCH3###
-    t16match3_date = page_soup.findAll("table")[129]
-    t16match3_date = t16match3_date.text.rstrip().strip().replace('Scorecard', '')
-
-    t16match3_score = page_soup.find_all(["table"])[130].find_all('td')
-    t16m3 = []
-    for i in t16match3_score:
-        t16m3.append(i.text.rstrip().strip())
-    t16match3_score = ' '.join(t16m3).replace('&', 'and ')
-
-    t16match3_result = page_soup.findAll("table")[131]
-    try:
-        t16match3_result = ' '.join(t16match3_result.td.b.text.rstrip().strip().split(' ')[:9])
-    except AttributeError:
-        t16match3_result = 'TBD'
-
-    t16m3lst = [t16match3_date, t16match3_score, t16match3_result]
-
-    schedule_2020_team13.update({years[2]: ' '.join(vs_teams16), 'match1': t16m1lst, 'match2': t16m2lst,
-                                 'match3': t16m3lst})
+    schedule_2020_team13.update({years[2]: ' '.join(vs_teams16), 'match1': t16m1lst, 'match2': t16m2lst})
 
     ###END 2020 TEAM4####
 
@@ -975,16 +956,16 @@ def index():
     ###2020 TEAM5####
 
     ###MATCH1###
-    t17match1_date = page_soup.findAll("table")[132]
+    t17match1_date = page_soup.findAll("table")[128]
     t17match1_date = t17match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t17match1_score = page_soup.find_all(["table"])[133].find_all('td')
+    t17match1_score = page_soup.find_all(["table"])[129].find_all('td')
     t17m1 = []
     for i in t17match1_score:
         t17m1.append(i.text.rstrip().strip())
     t17match1_score = ' '.join(t17m1).replace('&', 'and ')
 
-    t17match1_result = page_soup.findAll("table")[134]
+    t17match1_result = page_soup.findAll("table")[130]
     try:
         t17match1_result = ' '.join(t17match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -993,16 +974,16 @@ def index():
     t17m1lst = [t17match1_date, t17match1_score, t17match1_result]
 
     ###MATCH2###
-    t17match2_date = page_soup.findAll("table")[135]
+    t17match2_date = page_soup.findAll("table")[131]
     t17match2_date = t17match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t17match2_score = page_soup.find_all(["table"])[136].find_all('td')
+    t17match2_score = page_soup.find_all(["table"])[132].find_all('td')
     t17m2 = []
     for i in t17match2_score:
         t17m2.append(i.text.rstrip().strip())
     t17match2_score = ' '.join(t17m2).replace('&', 'and ')
 
-    t17match2_result = page_soup.findAll("table")[137]
+    t17match2_result = page_soup.findAll("table")[133]
     try:
         t17match2_result = ' '.join(t17match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1010,23 +991,42 @@ def index():
 
     t17m2lst = [t17match2_date, t17match2_score, t17match2_result]
 
-    schedule_2020_team14.update({years[2]: ' '.join(vs_teams17), 'match1': t17m1lst, 'match2': t17m2lst})
+    ###MATCH3###
+    t17match3_date = page_soup.findAll("table")[134]
+    t17match3_date = t17match3_date.text.rstrip().strip().replace('Scorecard', '')
+
+    t17match3_score = page_soup.find_all(["table"])[135].find_all('td')
+    t17m3 = []
+    for i in t17match3_score:
+        t17m3.append(i.text.rstrip().strip())
+    t17match3_score = ' '.join(t17m3).replace('&', 'and ')
+
+    t17match3_result = page_soup.findAll("table")[136]
+    try:
+        t17match3_result = ' '.join(t17match3_result.td.b.text.rstrip().strip().split(' ')[:9])
+    except AttributeError:
+        t17match3_result = 'TBD'
+
+    t17m3lst = [t17match3_date, t17match3_score, t17match3_result]
+
+    schedule_2020_team14.update(
+        {years[2]: ' '.join(vs_teams17), 'match1': t17m1lst, 'match2': t17m2lst, 'match3': t17m3lst})
 
     ###END 2020 TEAM5####
 
     ###2020 TEAM6####
 
     ###MATCH1###
-    t18match1_date = page_soup.findAll("table")[138]
+    t18match1_date = page_soup.findAll("table")[137]
     t18match1_date = t18match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t18match1_score = page_soup.find_all(["table"])[139].find_all('td')
+    t18match1_score = page_soup.find_all(["table"])[138].find_all('td')
     t18m1 = []
     for i in t18match1_score:
         t18m1.append(i.text.rstrip().strip())
     t18match1_score = ' '.join(t18m1).replace('&', 'and ')
 
-    t18match1_result = page_soup.findAll("table")[140]
+    t18match1_result = page_soup.findAll("table")[139]
     try:
         t18match1_result = ' '.join(t18match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1035,16 +1035,16 @@ def index():
     t18m1lst = [t18match1_date, t18match1_score, t18match1_result]
 
     ###MATCH2###
-    t18match2_date = page_soup.findAll("table")[141]
+    t18match2_date = page_soup.findAll("table")[140]
     t18match2_date = t18match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t18match2_score = page_soup.find_all(["table"])[142].find_all('td')
+    t18match2_score = page_soup.find_all(["table"])[141].find_all('td')
     t18m2 = []
     for i in t18match2_score:
         t18m2.append(i.text.rstrip().strip())
     t18match2_score = ' '.join(t18m2).replace('&', 'and ')
 
-    t18match2_result = page_soup.findAll("table")[143]
+    t18match2_result = page_soup.findAll("table")[142]
     try:
         t18match2_result = ' '.join(t18match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1054,21 +1054,22 @@ def index():
 
     schedule_2020_team15.update({years[2]: ' '.join(vs_teams18), 'match1': t18m1lst, 'match2': t18m2lst})
 
+    ###END 2020 TEAM6####
 
     ###2020-21 TEAM1####
 
 
     ###MATCH1###
-    t19match1_date = page_soup.findAll("table")[144]
+    t19match1_date = page_soup.findAll("table")[143]
     t19match1_date = t19match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t19match1_score = page_soup.find_all(["table"])[145].find_all('td')
+    t19match1_score = page_soup.find_all(["table"])[144].find_all('td')
     t19m1 = []
     for i in t19match1_score:
         t19m1.append(i.text.rstrip().strip())
     t19match1_score = ' '.join(t19m1).replace('&', 'and ')
 
-    t19match1_result = page_soup.findAll("table")[146]
+    t19match1_result = page_soup.findAll("table")[145]
     try:
         t19match1_result = ' '.join(t19match1_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1077,16 +1078,16 @@ def index():
     t19m1lst = [t19match1_date, t19match1_score, t19match1_result]
 
     ###MATCH2###
-    t19match2_date = page_soup.findAll("table")[147]
+    t19match2_date = page_soup.findAll("table")[146]
     t19match2_date = t19match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t19match2_score = page_soup.find_all(["table"])[148].find_all('td')
+    t19match2_score = page_soup.find_all(["table"])[147].find_all('td')
     t19m2 = []
     for i in t19match2_score:
         t19m2.append(i.text.rstrip().strip())
     t19match2_score = ' '.join(t19m2).replace('&', 'and ')
 
-    t19match2_result = page_soup.findAll("table")[149]
+    t19match2_result = page_soup.findAll("table")[148]
     try:
         t19match2_result = ' '.join(t19match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1094,61 +1095,25 @@ def index():
 
     t19m2lst = [t19match2_date, t19match2_score, t19match2_result]
 
-    ###MATCH3###
-    # t19match3_date = page_soup.findAll("table")[150]
-    # t19match3_date = t19match3_date.text.rstrip().strip().replace('Scorecard', '')
-    #
-    # t19match3_score = page_soup.find_all(["table"])[151].find_all('td')
-    # t19m3 = []
-    # for i in t19match3_score:
-    #     t19m3.append(i.text.rstrip().strip())
-    # t19match3_score = ' '.join(t19m3).replace('&', 'and ')
-    #
-    # t19match3_result = page_soup.findAll("table")[152]
-    # try:
-    #     t19match3_result = ' '.join(t19match3_result.td.b.text.rstrip().strip().split(' ')[:9])
-    # except AttributeError:
-    #     t19match3_result = 'TBD'
-    #
-    # t19m3lst = [t19match3_date, t19match3_score, t19match3_result]
-    #
-    #
-    # ###MATCH4###
-    # t19match4_date = page_soup.findAll("table")[153]
-    # t19match4_date = t19match4_date.text.rstrip().strip().replace('Scorecard', '')
-    #
-    # t19match4_score = page_soup.find_all(["table"])[154].find_all('td')
-    # t19m4 = []
-    # for i in t19match4_score:
-    #     t19m4.append(i.text.rstrip().strip())
-    # t19match4_score = ' '.join(t19m4).replace('&', 'and ')
-    #
-    # t19match4_result = page_soup.findAll("table")[155]
-    # try:
-    #     t19match4_result = ' '.join(t19match4_result.td.b.text.rstrip().strip().split(' ')[:9])
-    # except AttributeError:
-    #     t19match4_result = 'TBD'
-    #
-    # t19m4lst = [t19match4_date, t19match4_score, t19match4_result]
-
     schedule_2020_21_team1.update({years[3]: ' '.join(vs_teams19), 'match1': t19m1lst, 'match2': t19m2lst})
-                                   #'match3': t19m3lst, 'match4': t19m4lst})
 
     ###END 2020-21 TEAM1####
 
+
     ###2020-21 TEAM2####
 
+
     ###MATCH1###
-    t20match1_date = page_soup.findAll("table")[150]
+    t20match1_date = page_soup.findAll("table")[149]
     t20match1_date = t20match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t20match1_score = page_soup.find_all(["table"])[151].find_all('td')
+    t20match1_score = page_soup.find_all(["table"])[150].find_all('td')
     t20m1 = []
     for i in t20match1_score:
         t20m1.append(i.text.rstrip().strip())
     t20match1_score = ' '.join(t20m1).replace('&', 'and ')
 
-    t20match1_result = page_soup.findAll("table")[152]
+    t20match1_result = page_soup.findAll("table")[151]
     try:
         t20match1_result = ' '.join(t20match1_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1157,16 +1122,16 @@ def index():
     t20m1lst = [t20match1_date, t20match1_score, t20match1_result]
 
     ###MATCH2###
-    t20match2_date = page_soup.findAll("table")[153]
+    t20match2_date = page_soup.findAll("table")[152]
     t20match2_date = t20match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t20match2_score = page_soup.find_all(["table"])[154].find_all('td')
+    t20match2_score = page_soup.find_all(["table"])[153].find_all('td')
     t20m2 = []
     for i in t20match2_score:
         t20m2.append(i.text.rstrip().strip())
     t20match2_score = ' '.join(t20m2).replace('&', 'and ')
 
-    t20match2_result = page_soup.findAll("table")[155]
+    t20match2_result = page_soup.findAll("table")[154]
     try:
         t20match2_result = ' '.join(t20match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1175,16 +1140,16 @@ def index():
     t20m2lst = [t20match2_date, t20match2_score, t20match2_result]
 
     ###MATCH3###
-    t20match3_date = page_soup.findAll("table")[156]
+    t20match3_date = page_soup.findAll("table")[155]
     t20match3_date = t20match3_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t20match3_score = page_soup.find_all(["table"])[157].find_all('td')
+    t20match3_score = page_soup.find_all(["table"])[156].find_all('td')
     t20m3 = []
     for i in t20match3_score:
         t20m3.append(i.text.rstrip().strip())
     t20match3_score = ' '.join(t20m3).replace('&', 'and ')
 
-    t20match3_result = page_soup.findAll("table")[158]
+    t20match3_result = page_soup.findAll("table")[157]
     try:
         t20match3_result = ' '.join(t20match3_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1193,16 +1158,16 @@ def index():
     t20m3lst = [t20match3_date, t20match3_score, t20match3_result]
 
     ###MATCH4###
-    t20match4_date = page_soup.findAll("table")[159]
+    t20match4_date = page_soup.findAll("table")[158]
     t20match4_date = t20match4_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t20match4_score = page_soup.find_all(["table"])[160].find_all('td')
+    t20match4_score = page_soup.find_all(["table"])[159].find_all('td')
     t20m4 = []
     for i in t20match4_score:
         t20m4.append(i.text.rstrip().strip())
     t20match4_score = ' '.join(t20m4).replace('&', 'and ')
 
-    t20match4_result = page_soup.findAll("table")[161]
+    t20match4_result = page_soup.findAll("table")[160]
     try:
         t20match4_result = ' '.join(t20match4_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1215,19 +1180,21 @@ def index():
 
     ###END 2020-21 TEAM2####
 
+
     ###2020-21 TEAM3####
 
+
     ###MATCH1###
-    t21match1_date = page_soup.findAll("table")[162]
+    t21match1_date = page_soup.findAll("table")[161]
     t21match1_date = t21match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t21match1_score = page_soup.find_all(["table"])[163].find_all('td')
+    t21match1_score = page_soup.find_all(["table"])[162].find_all('td')
     t21m1 = []
     for i in t21match1_score:
         t21m1.append(i.text.rstrip().strip())
     t21match1_score = ' '.join(t21m1).replace('&', 'and ')
 
-    t21match1_result = page_soup.findAll("table")[164]
+    t21match1_result = page_soup.findAll("table")[163]
     try:
         t21match1_result = ' '.join(t21match1_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1236,16 +1203,16 @@ def index():
     t21m1lst = [t21match1_date, t21match1_score, t21match1_result]
 
     ###MATCH2###
-    t21match2_date = page_soup.findAll("table")[165]
+    t21match2_date = page_soup.findAll("table")[164]
     t21match2_date = t21match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t21match2_score = page_soup.find_all(["table"])[166].find_all('td')
+    t21match2_score = page_soup.find_all(["table"])[165].find_all('td')
     t21m2 = []
     for i in t21match2_score:
         t21m2.append(i.text.rstrip().strip())
     t21match2_score = ' '.join(t21m2).replace('&', 'and ')
 
-    t21match2_result = page_soup.findAll("table")[167]
+    t21match2_result = page_soup.findAll("table")[166]
     try:
         t21match2_result = ' '.join(t21match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1261,16 +1228,16 @@ def index():
 
 
     ###MATCH1###
-    t22match1_date = page_soup.findAll("table")[168]
+    t22match1_date = page_soup.findAll("table")[167]
     t22match1_date = t22match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t22match1_score = page_soup.find_all(["table"])[169].find_all('td')
+    t22match1_score = page_soup.find_all(["table"])[168].find_all('td')
     t22m1 = []
     for i in t22match1_score:
         t22m1.append(i.text.rstrip().strip())
     t22match1_score = ' '.join(t22m1).replace('&', 'and ')
 
-    t22match1_result = page_soup.findAll("table")[170]
+    t22match1_result = page_soup.findAll("table")[169]
     try:
         t22match1_result = ' '.join(t22match1_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1279,16 +1246,16 @@ def index():
     t22m1lst = [t22match1_date, t22match1_score, t22match1_result]
 
     ###MATCH2###
-    t22match2_date = page_soup.findAll("table")[171]
+    t22match2_date = page_soup.findAll("table")[170]
     t22match2_date = t22match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t22match2_score = page_soup.find_all(["table"])[172].find_all('td')
+    t22match2_score = page_soup.find_all(["table"])[171].find_all('td')
     t22m2 = []
     for i in t22match2_score:
         t22m2.append(i.text.rstrip().strip())
     t22match2_score = ' '.join(t22m2).replace('&', 'and ')
 
-    t22match2_result = page_soup.findAll("table")[173]
+    t22match2_result = page_soup.findAll("table")[172]
     try:
         t22match2_result = ' '.join(t22match2_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1297,16 +1264,16 @@ def index():
     t22m2lst = [t22match2_date, t22match2_score, t22match2_result]
 
     ###MATCH3###
-    t22match3_date = page_soup.findAll("table")[174]
+    t22match3_date = page_soup.findAll("table")[173]
     t22match3_date = t22match3_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t22match3_score = page_soup.find_all(["table"])[175].find_all('td')
+    t22match3_score = page_soup.find_all(["table"])[174].find_all('td')
     t22m3 = []
     for i in t22match3_score:
         t22m3.append(i.text.rstrip().strip())
     t22match3_score = ' '.join(t22m3).replace('&', 'and ')
 
-    t22match3_result = page_soup.findAll("table")[176]
+    t22match3_result = page_soup.findAll("table")[175]
     try:
         t22match3_result = ' '.join(t22match3_result.td.b.text.rstrip().strip().split(' ')[:9])
     except AttributeError:
@@ -1317,26 +1284,20 @@ def index():
     schedule_2020_21_team4.update({years[3]: ' '.join(vs_teams22), 'match1': t22m1lst, 'match2': t22m2lst,
                                    'match3': t22m3lst})
 
-    ###END 2020-21 TEAM4####
-
-
     ###2020-21 TEAM5####
 
-    ##
-    # NOTE: table 177, 178, 179 "missing"
-    ##
 
     ###MATCH1###
-    t23match1_date = page_soup.findAll("table")[180]
+    t23match1_date = page_soup.findAll("table")[176]
     t23match1_date = t23match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t23match1_score = page_soup.find_all(["table"])[181].find_all('td')
+    t23match1_score = page_soup.find_all(["table"])[177].find_all('td')
     t23m1 = []
     for i in t23match1_score:
         t23m1.append(i.text.rstrip().strip())
     t23match1_score = ' '.join(t23m1).replace('&', 'and ')
 
-    t23match1_result = page_soup.findAll("table")[182]
+    t23match1_result = page_soup.findAll("table")[178]
     try:
         t23match1_result = ' '.join(t23match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1345,16 +1306,16 @@ def index():
     t23m1lst = [t23match1_date, t23match1_score, t23match1_result]
 
     ###MATCH2###
-    t23match2_date = page_soup.findAll("table")[183]
+    t23match2_date = page_soup.findAll("table")[179]
     t23match2_date = t23match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t23match2_score = page_soup.find_all(["table"])[184].find_all('td')
+    t23match2_score = page_soup.find_all(["table"])[180].find_all('td')
     t23m2 = []
     for i in t23match2_score:
         t23m2.append(i.text.rstrip().strip())
     t23match2_score = ' '.join(t23m2).replace('&', 'and ')
 
-    t23match2_result = page_soup.findAll("table")[185]
+    t23match2_result = page_soup.findAll("table")[181]
     try:
         t23match2_result = ' '.join(t23match2_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1363,16 +1324,16 @@ def index():
     t23m2lst = [t23match2_date, t23match2_score, t23match2_result]
 
     ###MATCH3###
-    t23match3_date = page_soup.findAll("table")[186]
+    t23match3_date = page_soup.findAll("table")[182]
     t23match3_date = t23match3_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t23match3_score = page_soup.find_all(["table"])[187].find_all('td')
+    t23match3_score = page_soup.find_all(["table"])[183].find_all('td')
     t23m3 = []
     for i in t23match3_score:
         t23m3.append(i.text.rstrip().strip())
     t23match3_score = ' '.join(t23m3).replace('&', 'and ')
 
-    t23match3_result = page_soup.findAll("table")[188]
+    t23match3_result = page_soup.findAll("table")[184]
     try:
         t23match3_result = ' '.join(t23match3_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1381,16 +1342,16 @@ def index():
     t23m3lst = [t23match3_date, t23match3_score, t23match3_result]
 
     ###MATCH4###
-    t23match4_date = page_soup.findAll("table")[189]
+    t23match4_date = page_soup.findAll("table")[185]
     t23match4_date = t23match4_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t23match4_score = page_soup.find_all(["table"])[190].find_all('td')
+    t23match4_score = page_soup.find_all(["table"])[186].find_all('td')
     t23m4 = []
     for i in t23match4_score:
         t23m4.append(i.text.rstrip().strip())
     t23match4_score = ' '.join(t23m4).replace('&', 'and ')
 
-    t23match4_result = page_soup.findAll("table")[191]
+    t23match4_result = page_soup.findAll("table")[187]
     try:
         t23match4_result = ' '.join(t23match4_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1399,20 +1360,16 @@ def index():
     t23m4lst = [t23match4_date, t23match4_score, t23match4_result]
 
     ###MATCH5###
-
-    ###
-    # NOTE - there is a missing table. This match is the same as above.
-    ##
-    t23match5_date = page_soup.findAll("table")[189]
+    t23match5_date = page_soup.findAll("table")[188]
     t23match5_date = t23match5_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t23match5_score = page_soup.find_all(["table"])[190].find_all('td')
+    t23match5_score = page_soup.find_all(["table"])[189].find_all('td')
     t23m5 = []
     for i in t23match5_score:
         t23m5.append(i.text.rstrip().strip())
     t23match5_score = ' '.join(t23m5).replace('&', 'and ')
 
-    t23match5_result = page_soup.findAll("table")[191]
+    t23match5_result = page_soup.findAll("table")[190]
     try:
         t23match5_result = ' '.join(t23match5_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1425,19 +1382,20 @@ def index():
 
     ###END 2020-21 TEAM5####
 
+
     ###2020-21 TEAM6####
 
     ###MATCH1###
-    t24match1_date = page_soup.findAll("table")[192]
+    t24match1_date = page_soup.findAll("table")[191]
     t24match1_date = t24match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t24match1_score = page_soup.find_all(["table"])[193].find_all('td')
+    t24match1_score = page_soup.find_all(["table"])[192].find_all('td')
     t24m1 = []
     for i in t24match1_score:
         t24m1.append(i.text.rstrip().strip())
     t24match1_score = ' '.join(t24m1).replace('&', 'and ')
 
-    t24match1_result = page_soup.findAll("table")[194]
+    t24match1_result = page_soup.findAll("table")[193]
     try:
         t24match1_result = ' '.join(t24match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1446,16 +1404,16 @@ def index():
     t24m1lst = [t24match1_date, t24match1_score, t24match1_result]
 
     ###MATCH2###
-    t24match2_date = page_soup.findAll("table")[195]
+    t24match2_date = page_soup.findAll("table")[194]
     t24match2_date = t24match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t24match2_score = page_soup.find_all(["table"])[196].find_all('td')
+    t24match2_score = page_soup.find_all(["table"])[195].find_all('td')
     t24m2 = []
     for i in t24match2_score:
         t24m2.append(i.text.rstrip().strip())
     t24match2_score = ' '.join(t24m2).replace('&', 'and ')
 
-    t24match2_result = page_soup.findAll("table")[197]
+    t24match2_result = page_soup.findAll("table")[196]
     try:
         t24match2_result = ' '.join(t24match2_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1467,19 +1425,20 @@ def index():
 
     ###END 2020-21 TEAM6####
 
+
     ###2020-21 TEAM7####
 
     ###MATCH1###
-    t25match1_date = page_soup.findAll("table")[198]
+    t25match1_date = page_soup.findAll("table")[197]
     t25match1_date = t25match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t25match1_score = page_soup.find_all(["table"])[199].find_all('td')
+    t25match1_score = page_soup.find_all(["table"])[198].find_all('td')
     t25m1 = []
     for i in t25match1_score:
         t25m1.append(i.text.rstrip().strip())
     t25match1_score = ' '.join(t25m1).replace('&', 'and ')
 
-    t25match1_result = page_soup.findAll("table")[200]
+    t25match1_result = page_soup.findAll("table")[199]
     try:
         t25match1_result = ' '.join(t25match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1488,16 +1447,16 @@ def index():
     t25m1lst = [t25match1_date, t25match1_score, t25match1_result]
 
     ###MATCH2###
-    t25match2_date = page_soup.findAll("table")[201]
+    t25match2_date = page_soup.findAll("table")[200]
     t25match2_date = t25match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t25match2_score = page_soup.find_all(["table"])[202].find_all('td')
+    t25match2_score = page_soup.find_all(["table"])[201].find_all('td')
     t25m2 = []
     for i in t25match2_score:
         t25m2.append(i.text.rstrip().strip())
     t25match2_score = ' '.join(t25m2).replace('&', 'and ')
 
-    t25match2_result = page_soup.findAll("table")[203]
+    t25match2_result = page_soup.findAll("table")[202]
     try:
         t25match2_result = ' '.join(t25match2_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1512,16 +1471,16 @@ def index():
     ###2020-21 TEAM8####
 
     ###MATCH1###
-    t26match1_date = page_soup.findAll("table")[204]
+    t26match1_date = page_soup.findAll("table")[203]
     t26match1_date = t26match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t26match1_score = page_soup.find_all(["table"])[205].find_all('td')
+    t26match1_score = page_soup.find_all(["table"])[204].find_all('td')
     t26m1 = []
     for i in t26match1_score:
         t26m1.append(i.text.rstrip().strip())
     t26match1_score = ' '.join(t26m1).replace('&', 'and ')
 
-    t26match1_result = page_soup.findAll("table")[206]
+    t26match1_result = page_soup.findAll("table")[205]
     try:
         t26match1_result = ' '.join(t26match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1530,16 +1489,16 @@ def index():
     t26m1lst = [t26match1_date, t26match1_score, t26match1_result]
 
     ###MATCH2###
-    t26match2_date = page_soup.findAll("table")[207]
+    t26match2_date = page_soup.findAll("table")[206]
     t26match2_date = t26match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t26match2_score = page_soup.find_all(["table"])[208].find_all('td')
+    t26match2_score = page_soup.find_all(["table"])[207].find_all('td')
     t26m2 = []
     for i in t26match2_score:
         t26m2.append(i.text.rstrip().strip())
     t26match2_score = ' '.join(t26m2).replace('&', 'and ')
 
-    t26match2_result = page_soup.findAll("table")[209]
+    t26match2_result = page_soup.findAll("table")[208]
     try:
         t26match2_result = ' '.join(t26match2_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1548,16 +1507,16 @@ def index():
     t26m2lst = [t26match2_date, t26match2_score, t26match2_result]
 
     ###MATCH3###
-    t26match3_date = page_soup.findAll("table")[210]
+    t26match3_date = page_soup.findAll("table")[209]
     t26match3_date = t26match3_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t26match3_score = page_soup.find_all(["table"])[211].find_all('td')
+    t26match3_score = page_soup.find_all(["table"])[210].find_all('td')
     t26m3 = []
     for i in t26match3_score:
         t26m3.append(i.text.rstrip().strip())
     t26match3_score = ' '.join(t26m3).replace('&', 'and ')
 
-    t26match3_result = page_soup.findAll("table")[212]
+    t26match3_result = page_soup.findAll("table")[211]
     try:
         t26match3_result = ' '.join(t26match3_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1570,19 +1529,20 @@ def index():
 
     ###END 2020-21 TEAM8####
 
+
     ###2020-21 TEAM9####
 
     ###MATCH1###
-    t27match1_date = page_soup.findAll("table")[213]
+    t27match1_date = page_soup.findAll("table")[212]
     t27match1_date = t27match1_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t27match1_score = page_soup.find_all(["table"])[214].find_all('td')
+    t27match1_score = page_soup.find_all(["table"])[213].find_all('td')
     t27m1 = []
     for i in t27match1_score:
         t27m1.append(i.text.rstrip().strip())
     t27match1_score = ' '.join(t27m1).replace('&', 'and ')
 
-    t27match1_result = page_soup.findAll("table")[215]
+    t27match1_result = page_soup.findAll("table")[214]
     try:
         t27match1_result = ' '.join(t27match1_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1591,16 +1551,16 @@ def index():
     t27m1lst = [t27match1_date, t27match1_score, t27match1_result]
 
     ###MATCH2###
-    t27match2_date = page_soup.findAll("table")[216]
+    t27match2_date = page_soup.findAll("table")[215]
     t27match2_date = t27match2_date.text.rstrip().strip().replace('Scorecard', '')
 
-    t27match2_score = page_soup.find_all(["table"])[217].find_all('td')
+    t27match2_score = page_soup.find_all(["table"])[216].find_all('td')
     t27m2 = []
     for i in t27match2_score:
         t27m2.append(i.text.rstrip().strip())
     t27match2_score = ' '.join(t27m2).replace('&', 'and ')
 
-    t27match2_result = page_soup.findAll("table")[218]
+    t27match2_result = page_soup.findAll("table")[217]
     try:
         t27match2_result = ' '.join(t27match2_result.td.b.text.rstrip().strip().split(' ')[:5])
     except AttributeError:
@@ -1610,7 +1570,7 @@ def index():
 
     schedule_2020_21_team9.update({years[3]: ' '.join(vs_teams27), 'match1': t27m1lst, 'match2': t27m2lst})
 
-    ###END 2020-21 TEAM8####
+    ###END 2020-21 TEAM9####
 
 
 
@@ -1794,10 +1754,6 @@ def index():
     t16match2_dt = schedule_2020_team13['match2'][0]
     t16match2_scr = schedule_2020_team13['match2'][1]
     t16match2_rslt = schedule_2020_team13['match2'][2]
-
-    t16match3_dt = schedule_2020_team13['match3'][0]
-    t16match3_scr = schedule_2020_team13['match3'][1]
-    t16match3_rslt = schedule_2020_team13['match3'][2]
     ###2020 TEAM13####
     t17match1_team = schedule_2020_team14['2020']
     t17match1_dt = schedule_2020_team14['match1'][0]
@@ -1825,14 +1781,6 @@ def index():
     t19match2_dt = schedule_2020_21_team1['match2'][0]
     t19match2_scr = schedule_2020_21_team1['match2'][1]
     t19match2_rslt = schedule_2020_21_team1['match2'][2]
-
-    #t19match3_dt = schedule_2020_21_team1['match3'][0]
-    #t19match3_scr = schedule_2020_21_team1['match3'][1]
-    #t19match3_rslt = schedule_2020_21_team1['match3'][2]
-
-    #t19match4_dt = schedule_2020_21_team1['match4'][0]
-    #t19match4_scr = schedule_2020_21_team1['match4'][1]
-    #t19match4_rslt = schedule_2020_21_team1['match4'][2]
     ###2020-21 TEAM16####
     t20match1_team = schedule_2020_21_team2['2020–21']
     t20match1_dt = schedule_2020_21_team2['match1'][0]
@@ -1984,7 +1932,6 @@ def index():
                            t15match3_scr=t15match3_scr, t15match3_rslt=t15match3_rslt, t16match1_team=t16match1_team,
                            t16match1_dt=t16match1_dt, t16match1_scr=t16match1_scr, t16match1_rslt=t16match1_rslt,
                            t16match2_dt=t16match2_dt, t16match2_scr=t16match2_scr, t16match2_rslt=t16match2_rslt,
-                           t16match3_dt=t16match3_dt, t16match3_scr=t16match3_scr, t16match3_rslt=t16match3_rslt,
                            t17match1_team=t17match1_team, t17match1_dt=t17match1_dt, t17match1_scr=t17match1_scr,
                            t17match1_rslt=t17match1_rslt, t17match2_dt=t17match2_dt, t17match2_scr=t17match2_scr,
                            t17match2_rslt=t17match2_rslt, t18match1_team=t18match1_team, t18match1_dt=t18match1_dt,
