@@ -40,6 +40,195 @@ def get_league_positions():
 
     return [x for x in point_data if x][n:][:-1]
 
+def most_runs():
+
+    page_url = "https://en.wikipedia.org/wiki/2019%E2%80%9321_ICC_World_Test_Championship"
+
+    uClient = uReq(page_url)
+
+    page_soup = soup(uClient.read(), "html.parser")
+    uClient.close()
+
+    most_runs_table = page_soup.findAll("table", {"class": "wikitable"})[4]
+
+    table_body = most_runs_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+         columns = row.find_all('th')
+         columns = [ele.text.strip() for ele in columns]
+         most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    return [x for x in most_runs_data if x][n:][:-1]
+
+
+def most_wickets():
+
+    page_url = "https://en.wikipedia.org/wiki/2019%E2%80%9321_ICC_World_Test_Championship"
+
+    uClient = uReq(page_url)
+
+    page_soup = soup(uClient.read(), "html.parser")
+    uClient.close()
+
+    most_wickets_table = page_soup.findAll("table", {"class": "wikitable"})[5]
+
+    table_body = most_wickets_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    return [x for x in most_runs_data if x][n:][:-1]
+
+def highest_ind_score():
+
+    page_url = "https://en.wikipedia.org/wiki/2019%E2%80%9321_ICC_World_Test_Championship"
+
+    uClient = uReq(page_url)
+
+    page_soup = soup(uClient.read(), "html.parser")
+    uClient.close()
+
+    highest_ind_score_table = page_soup.findAll("table", {"class": "wikitable"})[6]
+
+    table_body = highest_ind_score_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    return [x for x in most_runs_data if x][n:][:-1]
+
+
+def best_bowling_fig():
+
+    page_url = "https://en.wikipedia.org/wiki/2019%E2%80%9321_ICC_World_Test_Championship"
+
+    uClient = uReq(page_url)
+
+    page_soup = soup(uClient.read(), "html.parser")
+    uClient.close()
+
+    best_bowling_fig_table = page_soup.findAll("table", {"class": "wikitable"})[7]
+
+    table_body = best_bowling_fig_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    return [x for x in most_runs_data if x][n:][:-1]
+
+def highest_team_totals():
+
+    page_url = "https://en.wikipedia.org/wiki/2019%E2%80%9321_ICC_World_Test_Championship"
+
+    uClient = uReq(page_url)
+
+    page_soup = soup(uClient.read(), "html.parser")
+    uClient.close()
+
+    highest_team_totals_table = page_soup.findAll("table", {"class": "wikitable"})[8]
+
+    table_body = highest_team_totals_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    return [x for x in most_runs_data if x][n:][:-1]
+
+def lowest_team_totals():
+
+    page_url = "https://en.wikipedia.org/wiki/2019%E2%80%9321_ICC_World_Test_Championship"
+
+    uClient = uReq(page_url)
+
+    page_soup = soup(uClient.read(), "html.parser")
+    uClient.close()
+
+    lowest_team_totals_table = page_soup.findAll("table", {"class": "wikitable"})[9]
+
+    table_body = lowest_team_totals_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    return [x for x in most_runs_data if x][n:][:-1]
+
+
 
 def get_about():
 
@@ -1663,7 +1852,7 @@ def get_schedules():
     #print(schedule_2020_21_team6)
     #print(schedule_2020_21_team7)
     #print(schedule_2020_21_team8)
-    print(schedule_2020_21_team9)
+    #print(schedule_2020_21_team9)
     #print(schedule['2019'])
     #print(schedule['match1'])
     #print(schedule['match2'])
@@ -1675,9 +1864,25 @@ def get_schedules():
 
 
 def main():
+
+    x = lowest_team_totals()
+    print(x)
+
+    #x = highest_team_totals()
+    #print(x)
+
+    #x = best_bowling_fig()
+    #print(x)
+    #x = highest_ind_score()
+    #print(x)
+
+    #x = most_wickets()
+    #print(x)
+    #x = most_runs()
+    #print(x)
     #x = get_league_positions()
     #print(x)
-    get_schedules()
+    #get_schedules()
     #get_teams()
     #get_point_scoring()
     #get_about()

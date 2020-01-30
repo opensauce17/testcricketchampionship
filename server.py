@@ -37,8 +37,167 @@ def index():
 
     n = 2
 
-    data = [x for x in point_data if x][n:][:-1]
+    leader_data = [x for x in point_data if x][n:][:-1]
+
     #################################
+
+    ###MOST RUNS###
+
+    most_runs_table = page_soup.findAll("table", {"class": "wikitable"})[4]
+
+    table_body = most_runs_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    most_runs =  [x for x in most_runs_data if x][n:][:-1]
+
+    ############################################
+
+    ###MOST WICKET###
+
+    most_wickets_table = page_soup.findAll("table", {"class": "wikitable"})[5]
+
+    table_body = most_wickets_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    most_wickets =  [x for x in most_runs_data if x][n:][:-1]
+
+
+    ############################################
+
+    ###HIGHEST INDIVIDUAL SCORE###
+
+    highest_ind_score_table = page_soup.findAll("table", {"class": "wikitable"})[6]
+
+    table_body = highest_ind_score_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    highest_ind_score =  [x for x in most_runs_data if x][n:][:-1]
+
+    ############################################
+
+    ###BEST BOWLING FIGURES###
+
+    best_bowling_fig_table = page_soup.findAll("table", {"class": "wikitable"})[7]
+
+    table_body = best_bowling_fig_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    best_bowling_fig = [x for x in most_runs_data if x][n:][:-1]
+
+    ############################################
+
+    ###HIGHEST TEAM TOTALS###
+
+    highest_team_totals_table = page_soup.findAll("table", {"class": "wikitable"})[8]
+
+    table_body = highest_team_totals_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    highest_team_totals = [x for x in most_runs_data if x][n:][:-1]
+
+    ############################################
+
+    ###LOWEST TEAMS TOTALS###
+
+    lowest_team_totals_table = page_soup.findAll("table", {"class": "wikitable"})[9]
+
+    table_body = lowest_team_totals_table.find('tbody')
+
+    most_runs_data = []
+
+    rows = table_body.find_all('tr')
+
+    for row in rows:
+        columns = row.find_all('th')
+        columns = [ele.text.strip() for ele in columns]
+        most_runs_data.append([ele for ele in columns if ele])
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        most_runs_data.append([ele for ele in cols if ele])
+
+    n = 1
+
+    lowest_team_totals =  [x for x in most_runs_data if x][n:][:-1]
+
+    ############################################
+
 
     ###ABOUT SECTION#######
     about = []
@@ -1883,10 +2042,12 @@ def index():
     t27match2_scr = schedule_2020_21_team9['match2'][1]
     t27match2_rslt = schedule_2020_21_team9['match2'][2]
 
-    return render_template('index.html', about=about, point_scoring=point_scoring, data=data, aus_flag=aus_flag,
+    return render_template('index.html', about=about, point_scoring=point_scoring, leader_data=leader_data, aus_flag=aus_flag,
                            ban_flag=ban_flag,  eng_flag=eng_flag, ind_flag=ind_flag, nzl_flag=nzl_flag,
                            pak_flag=pak_flag, saf_flag=saf_flag, sri_flag=sri_flag, win_flag=win_flag,
-                           match1_team=match1_team, match1_dt=match1_dt,
+                           match1_team=match1_team, match1_dt=match1_dt, most_runs=most_runs, most_wickets=most_wickets,
+                           highest_ind_score=highest_ind_score, best_bowling_fig=best_bowling_fig,
+                           highest_team_totals=highest_team_totals, lowest_team_totals=lowest_team_totals,
                            match1_scr=match1_scr, match1_rslt=match1_rslt, match2_dt=match2_dt,
                            match2_scr=match2_scr, match2_rslt=match2_rslt, match3_dt=match3_dt, match3_scr=match3_scr,
                            match3_rslt=match3_rslt, match4_dt=match4_dt, match4_scr=match4_scr, match4_rslt=match4_rslt,

@@ -51,9 +51,6 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!--<h1><a href="#main">ICC<span>WORLD TEST</span>CHAMPIONSHIP</a></h1> -->
-      <!-- <a href="#intro" class="scrollto"><img src="{{ url_for('static', filename='img/logo6.png') }}" alt="" title=""></a> -->
       </div>
 
       <nav id="nav-menu-container">
@@ -63,6 +60,8 @@
             <li><a href="#teams">Participating Teams</a></li>
           <li><a href="#speakers">Point Scoring</a></li>
           <li><a href="#pointstable">Leader Board</a></li>
+          <li><a href="#indstats">Individual Statistics</a></li>
+          <li><a href="#teamstats">Team Statistics</a></li>
           <li><a href="#schedule">Match Schedules</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -199,14 +198,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-       <!-- <div class="section-header"> -->
           <div class="section-header">
           <h2>Point Scoring</h2>
           </div>
              {% for i in point_scoring %}
             <p>{{ i }}</p>
               {% endfor %}
-          <!--<p>Here are some of our speakers</p>-->
         </div>
         </div>
       </div>
@@ -219,7 +216,6 @@
       <div class="container wow fadeInUp">
         <div class="row">
           <div class="col-lg-12">
-       <!-- <div class="section-header"> -->
          <div class="tab-content row justify-content-center">
          <div class="section-header">
           <h2>Leader Board</h2>
@@ -246,7 +242,7 @@
                   </tr>
                </thead>
                  <tbody>
-                    {% for i in data %}
+                    {% for i in leader_data %}
                  <tr>
                     {% for x in i %}
                  <td>{{ x }}</td>
@@ -255,6 +251,7 @@
                     {% endfor %}
                 </tbody>
              </table>
+             <hr>
          </div>
        </div>
      </div>
@@ -263,6 +260,229 @@
  </section>
 
 
+    <!--==========================
+     Individual stats Table Section
+    ============================-->
+    <section id="indstats" class="wow fadeInUp">
+    <br>
+    <br>
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-lg-12">
+         <div class="tab-content row justify-content-center">
+         <div class="section-header">
+          <h2>Individual Statistics</h2>
+         </div>
+           <div class="col-xs-6 table-responsive-xl ">
+              <table class="table">
+                <thead class="thead-dark">
+                <hr>
+                <center><h5>Most Runs</h5></center>
+                <hr>
+                  <tr>
+                    <th scope="col">Batsman</th>
+                    <th scope="col">Matches</th>
+                    <th scope="col">Innings</th>
+                    <th scope="col">Not Outs</th>
+                    <th scope="col">Runs</th>
+                    <th scope="col">Average</th>
+                    <th scope="col">Highest Score</th>
+                    <th scope="col">100's</th>
+                    <th scope="col">50's</th>
+                  </tr>
+               </thead>
+              <tbody>
+                    {% for i in most_runs %}
+                 <tr>
+                    {% for x in i %}
+                 <td>{{ x }}</td>
+                    {% endfor %}
+                 </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+           <hr>
+         </div>
+
+
+
+         <div class="col-xs-6 table-responsive-xl ">
+              <table class="table">
+                <thead class="thead-dark">
+                <center><h5>Most Wickets</h5></center>
+                <hr>
+                  <tr>
+                    <th scope="col">Bowler</th>
+                    <th scope="col">Matches</th>
+                    <th scope="col">Innings</th>
+                    <th scope="col">Wickets</th>
+                    <th scope="col">Runs</th>
+                    <th scope="col">Overs</th>
+                    <th scope="col">BBI</th>
+                    <th scope="col">BBM</th>
+                    <th scope="col">Average</th>
+                    <th scope="col">5 Wickets</th>
+                    <th scope="col">10 Wickets</th>
+                  </tr>
+               </thead>
+              <tbody>
+                    {% for i in most_wickets %}
+                 <tr>
+                    {% for x in i %}
+                 <td>{{ x }}</td>
+                    {% endfor %}
+                 </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+             <hr>
+         </div>
+
+
+         <div class="col-xs-6 table-responsive-xl ">
+              <table class="table">
+                <thead class="thead-dark">
+                <center><h5>Highest Individual Score</h5></center>
+                <hr>
+                  <tr>
+                    <th scope="col">Batsman</th>
+                    <th scope="col">Runs</th>
+                    <th scope="col">Balls</th>
+                    <th scope="col">4's</th>
+                    <th scope="col">6's</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Opposition</th>
+                    <th scope="col">Ground</th>
+                    <th scope="col">Match Date</th>
+                  </tr>
+               </thead>
+              <tbody>
+                    {% for i in highest_ind_score %}
+                 <tr>
+                    {% for x in i %}
+                 <td>{{ x }}</td>
+                    {% endfor %}
+                 </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+             <hr>
+         </div>
+
+
+         <div class="col-xs-6 table-responsive-xl ">
+              <table class="table">
+                <thead class="thead-dark">
+                <center><h5>Best Bowling Figures In An Innings</h5></center>
+                <hr>
+                  <tr>
+                    <th scope="col">Bowler</th>
+                    <th scope="col">Wickets</th>
+                    <th scope="col">Runs</th>
+                    <th scope="col">Overs</th>
+                    <th scope="col">Maidens</th>
+                    <th scope="col">Economy</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Opposition</th>
+                    <th scope="col">Ground</th>
+                    <th scope="col">Match Date</th>
+                  </tr>
+               </thead>
+              <tbody>
+                    {% for i in best_bowling_fig %}
+                 <tr>
+                    {% for x in i %}
+                 <td>{{ x }}</td>
+                    {% endfor %}
+                 </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+             <hr>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ </section>
+
+
+ <!--==========================
+     Teams stats Table Section
+    ============================-->
+    <section id="teamstats" class="section-with-bg">
+     <br>
+     <br>
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-lg-12">
+         <div class="tab-content row justify-content-center">
+         <div class="section-header">
+          <h2>Team Statistics</h2>
+         </div>
+           <div class="col-xs-6 table-responsive-xl ">
+              <table class="table">
+                <thead class="thead-dark">
+                <hr>
+                <center><h5>Highest Team Totals</h5></center>
+                <hr>
+                  <tr>
+                    <th scope="col">Team</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Overs</th>
+                    <th scope="col">Run Rate</th>
+                    <th scope="col">Innings</th>
+                    <th scope="col">Opposition</th>
+                    <th scope="col">Ground</th>
+                    <th scope="col">Match Date</th>
+                  </tr>
+               </thead>
+               <tbody>
+                    {% for i in highest_team_totals %}
+                 <tr>
+                    {% for x in i %}
+                 <td>{{ x }}</td>
+                    {% endfor %}
+                 </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+             <hr>
+         </div>
+
+         <div class="col-xs-6 table-responsive-xl ">
+              <table class="table">
+                <thead class="thead-dark">
+                 <center><h5>Lowest Team Totals</h5></center>
+                 <hr>
+                  <tr>
+                    <th scope="col">Team</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Overs</th>
+                    <th scope="col">Run Rate</th>
+                    <th scope="col">Innings</th>
+                    <th scope="col">Opposition</th>
+                    <th scope="col">Ground</th>
+                    <th scope="col">Match Date</th>
+                  </tr>
+               </thead>
+               <tbody>
+                    {% for i in lowest_team_totals %}
+                 <tr>
+                    {% for x in i %}
+                 <td>{{ x }}</td>
+                    {% endfor %}
+                 </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+            <hr>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+ </section>
 
     <!--==========================
       Schedule Section
@@ -271,7 +491,6 @@
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>Match Schedules</h2>
-        <!--  <p>Here is the match schedules</p> -->
         </div>
 
         <ul class="nav nav-tabs" role="tablist">
