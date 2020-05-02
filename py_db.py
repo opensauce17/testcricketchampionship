@@ -312,9 +312,11 @@ def get_schedules():
     page_soup = soup(uClient.read(), "html.parser")
     uClient.close()
 
-    years_html = [ page_soup.findAll("h3")[3], page_soup.findAll("h3")[4],
-              page_soup.findAll("h3")[5], page_soup.findAll("h3")[6]
+    years_html = [ page_soup.findAll("h3")[4], page_soup.findAll("h3")[5],
+              page_soup.findAll("h3")[6], page_soup.findAll("h3")[7]
             ]
+    #print(years_html)
+    #exit()
 
 
     schedule_2019_team1 = {}
@@ -346,6 +348,8 @@ def get_schedules():
     schedule_2020_21_team9 = {}
 
     years = [i.text.replace('[edit]', '') for i in years_html]
+    print(years)
+    exit()
 
     vs_teams_html = page_soup.findAll("h4")
 
@@ -1826,7 +1830,7 @@ def get_schedules():
 
 
 
-    #print(schedule_2019_team1)
+    print(schedule_2019_team1)
     # print(schedule_2019_team2)
     # print(schedule_2019_team3)
     #print(schedule_2019_20_team1)
@@ -1865,8 +1869,8 @@ def get_schedules():
 
 def main():
 
-    x = lowest_team_totals()
-    print(x)
+    #x = lowest_team_totals()
+    #print(x)
 
     #x = highest_team_totals()
     #print(x)
@@ -1882,7 +1886,7 @@ def main():
     #print(x)
     #x = get_league_positions()
     #print(x)
-    #get_schedules()
+    get_schedules()
     #get_teams()
     #get_point_scoring()
     #get_about()
@@ -1890,7 +1894,6 @@ def main():
     #positions = get_league_positions()
 
     #print(positions)
-
 
 
 

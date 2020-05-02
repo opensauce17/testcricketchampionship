@@ -242,8 +242,8 @@ def index():
     ###################################
 
     ###MATCH SCHEDULE SECTION###
-    years_html = [page_soup.findAll("h3")[3], page_soup.findAll("h3")[4],
-                  page_soup.findAll("h3")[5], page_soup.findAll("h3")[6]
+    years_html = [page_soup.findAll("h3")[4], page_soup.findAll("h3")[5],
+                  page_soup.findAll("h3")[6], page_soup.findAll("h3")[7]
                   ]
 
     schedule = {}
